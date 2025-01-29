@@ -333,7 +333,7 @@ impl Validate for HexBinary128 {}
 
 impl fmt::Display for HexBinary128 {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "{:#034x?}", self.0)
+        write!(f, "{:032x?}", self.0)
     }
 }
 
