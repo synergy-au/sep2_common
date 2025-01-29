@@ -342,7 +342,7 @@ impl FromStr for HexBinary128 {
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         Ok(HexBinary128(
-            u128::from_str_radix(&s[2..], 16).map_err(|_| "could not parse hexbinary128")?,
+            u128::from_str_radix(&s, 16).map_err(|_| "could not parse hexbinary128")?,
         ))
     }
 }
